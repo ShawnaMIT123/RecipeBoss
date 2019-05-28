@@ -22,13 +22,12 @@ export default NavBar
 NavBar.displayName = 'NavBar'
 
 const Header = styled.header`
-  background-color: gray;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
-  box-shadow: 0 0 10px 0 black;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+border: 1px solid #e7e7e7;
+background-color: #f3f3f3;
 `
 const HeaderMenu = styled.ul`
   margin-top: 0px;
@@ -38,11 +37,30 @@ const HeaderMenu = styled.ul`
     margin-left: auto;
   }
 `
-const HeaderItem = styled.li`
-  padding: 0 10px 0 10px;
+const HeaderItem = styled.li `
+display: block;
+color: #666;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+
+li a {
+
+  display: block;
+  color: #666;
   text-align: center;
-  box-sizing: border-box;
-  list-style-type: none;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
 `
 const Icon = styled.img`
   height: 24px;
